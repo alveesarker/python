@@ -1,4 +1,4 @@
-#This function will create a truth table of columns that the user will input
+#Generates a truth table grid based on the number of input columns
 def table_maker(column):
     grid = []
     row = (2 ** column)
@@ -19,6 +19,8 @@ def table_maker(column):
 
     return grid
 
+
+#Generates a truth table for the AND operation
 def table_for_and(column):
     truthTableList = table_maker(column)
     for i in range(len(truthTableList)):
@@ -28,6 +30,8 @@ def table_for_and(column):
             truthTableList[i].append('False')
     return truthTableList
 
+
+#Generates a truth table for the OR operation
 def table_for_or(column):
     truthTableList = table_maker(column)
     for i in range(len(truthTableList)):
@@ -38,6 +42,8 @@ def table_for_or(column):
     return truthTableList
 
 
+
+#Generates a truth table for the XOR operation
 def table_for_xor(column):
     truthTableList = table_maker(column)
     for i in truthTableList:
