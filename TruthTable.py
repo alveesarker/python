@@ -55,8 +55,8 @@ def table_for_xor(column):
             i.append('True')
     return truthTableList
 
-
-def selectOperation(column):
+#Function for selecting logical operator
+def select_operation(column):
     option = input('Enter operation(AND, OR, XOR, etc.): ')
     if option == 'AND' or option == 'and':
         truthTableList = table_for_and(column)
@@ -68,8 +68,12 @@ def selectOperation(column):
         truthTableList = table_for_xor(column)
         return truthTableList
 
-column = int(input('Enter the number of variables: '))
-truthTableList = selectOperation(column)
+
+
+column = int(input('Enter the number of variables: '))#taking input from user for columns 
+truthTableList = select_operation(column)
+
+#printing the table using loop
 for i in range(len(truthTableList)):
     for j in range(len(truthTableList[i])):
         if j == len(truthTableList[i]) - 1:
