@@ -1,3 +1,4 @@
+#This function will create a truth table of columns that the user will input
 def table_maker(column):
     grid = []
     row = (2 ** column)
