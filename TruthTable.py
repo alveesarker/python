@@ -81,9 +81,9 @@ for i in range(len(truthTableList)):
 
         elif j == len(truthTableList[i]) - 2:
             if truthTableList[i][j] == 'False':
-                print(truthTableList[i][j], end='  |        ')
+                print(truthTableList[i][j], end='  |   ->   ')
             else:
-                print(truthTableList[i][j], end='   |        ')
+                print(truthTableList[i][j], end='   |   ->   ')
 
         elif truthTableList[i][j] == 'True':
             print(truthTableList[i][j], end='   |   ')
