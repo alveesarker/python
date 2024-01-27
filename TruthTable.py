@@ -42,6 +42,16 @@ def table_for_or(column):
     return truthTableList
 
 
+#Generates a truth table for the NOR operation
+def table_for_nor(column):
+    truthTableList = table_maker(column)
+    for i in range(len(truthTableList)):
+        if i == len(truthTableList) - 1:
+            truthTableList[i].append('True')
+        else:
+            truthTableList[i].append('False')
+    return truthTableList
+
 
 #Generates a truth table for the XOR operation
 def table_for_xor(column):
@@ -66,6 +76,9 @@ def select_operation(column):
         return truthTableList
     elif option == 'XOR' or option == 'xor':
         truthTableList = table_for_xor(column)
+        return truthTableList
+    elif option == 'NOR' or option == 'nor':
+        truthTableList = table_for_nor(column)
         return truthTableList
 
 
