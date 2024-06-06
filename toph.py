@@ -350,3 +350,67 @@ if len(a) % 2 == 0:
             print('No')
 else:
     print('No')
+
+
+
+#bpl mubarak
+n = int(input())
+for i in range(n):
+    s = input()
+    count = 0
+    for j in s:
+        if j == "N" or j == "W" or j == "D":
+            continue
+        else:
+            count += 1
+    over = count // 6
+    ball = count % 6
+    if over == 1 and ball == 1:
+        print(f"{over} OVER {ball} BALL")
+    elif over == 1 and ball > 1:
+        print(f"{over} OVER {ball} BALLs")
+    elif over == 1 and ball == 0:
+        print(f"{over} OVER")
+    elif over == 0 and ball == 1:
+        print(f"{ball} BALL")
+    elif over == 0 and ball > 1:
+        print(f"{ball} BALLS")
+    elif over > 1 and ball == 1:
+        print(f"{over} OVERS {ball} BALL")
+    elif over > 1 and ball > 1:
+        print(f"{over} OVERS {ball} BALLS")
+    elif over > 1 and ball == 0:
+        print(f"{over} OVERS")
+
+
+
+#ICPC Is Coming in Hot!
+number = list(input())
+
+most_n_of_times = ''
+large = 0
+for i in number:
+    n_count = number.count(i)
+    if large == n_count:
+        if int(most_n_of_times) < int(i):
+            continue
+    elif large < n_count:
+        large = n_count
+        most_n_of_times = i
+
+print(most_n_of_times)
+
+
+
+# Caesar Cipher
+n = int(input())
+
+string = input()
+l_s = "abcdefghijklmnopqrstuvwxyz"
+new_s = ''
+for i in string:
+    if i != " ":
+        new_s += l_s[l_s.index(i) - n]
+    else:
+        new_s += " "
+print(new_s)
