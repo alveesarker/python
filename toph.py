@@ -414,3 +414,29 @@ for i in string:
     else:
         new_s += " "
 print(new_s)
+
+
+#Neat Brackets
+def bracket_matching(s):
+    o_b = '('
+    c_b = ')'
+    stack = []
+    
+    for i in s:
+        if i == o_b:
+            stack.append(i)
+        elif i == c_b:
+            if stack:
+                stack.pop()
+            else:
+                print('No')
+                return
+    
+    if not stack:
+        print("Yes")
+    else:
+        print('No')
+
+bracket_input = input("Enter the bracket sequence: ")
+bracket_matching(bracket_input)
+
